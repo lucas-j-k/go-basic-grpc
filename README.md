@@ -1,0 +1,1 @@
+simple CLI client and server to try out Golang GRPC
