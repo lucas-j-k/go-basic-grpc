@@ -1,0 +1,21 @@
+syntax = "proto3";
+package todo  ;
+
+option go_package = "example/go-grpc";
+
+// Define the service and exposed methods
+service Todo {
+  // Get Todo 
+  rpc GetTodo (TodoRequest) returns (TodoReply) {}
+}
+
+// Request message - this will be sent to the GRPC server from the client
+message TodoRequest {
+  int64 id = 1;
+}
+
+// Response message - this comes back from the GRPC server
+message TodoReply {
+  int64 id = 1;
+  string content = 2;
+}
